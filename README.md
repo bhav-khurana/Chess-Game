@@ -1,1 +1,1 @@
-# 3D-Chess-Game
+# Chess-Game
