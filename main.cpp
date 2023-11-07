@@ -4,10 +4,10 @@
 #include <string.h>
 using namespace std;
 
-// Define the size of the window
+// Defining the size of the window
 int w = 1366, h = 685, d, offset = 2;
 
-//Function prototypes
+// Declaring the function prototypes
 void rectangle(int a, int b, int c, int d);
 void triangle(int a, int b, int c, int d, int e, int f);
 void circle(int x, int y, int r);
@@ -19,7 +19,8 @@ void clearbox(int x, int y);
 void highlight(int x, int y);
 void message(char *);
 void display();
-chessboard c1(skeleton_box, clearbox, highlight, display, message);
+
+Chessboard c1(skeleton_box, clearbox, highlight, display, message);
 
 void myinit() {
 	// Set the viewport to cover the entire window
@@ -94,7 +95,7 @@ void king(int x, int y, int color) {
 	else
 		glColor3ub(30, 5, 34); // Dark color for black King
 
-	// Calculate the actual position of the King on the chessboard
+	// Calculate the actual position of the King on the Chessboard
 	x = x * d + offset + d / 2;
 	y = y * d + offset + d / 2;
 
@@ -120,7 +121,7 @@ void knight(int x, int y, int color) {
 	else
 		glColor3ub(30, 5, 34); // Dark color for black Knight
 
-	// Calculate the actual position of the Knight on the chessboard
+	// Calculate the actual position of the Knight on the Chessboard
 	x = x * d + offset + d / 2;
 	y = y * d + offset + d / 2;
 
@@ -156,7 +157,7 @@ void queen(int x, int y, int color) {
 	else
 		glColor3ub(30, 5, 34); // Dark color for black Queen
 
-	// Calculate the actual position of the Queen on the chessboard
+	// Calculate the actual position of the Queen on the Chessboard
 	x = x * d + offset + d / 2;
 	y = y * d + offset + d / 2;
 
@@ -207,7 +208,7 @@ void rook(int x, int y, int color) {
 	else
 		glColor3ub(30, 5, 34); // Dark color for black Rook
 
-	// Calculate the actual position of the Rook on the chessboard
+	// Calculate the actual position of the Rook on the Chessboard
 	x = x * d + offset + d / 2;
 	y = y * d + offset + d / 2;
 
@@ -229,7 +230,7 @@ void pawn(int x, int y, int color) {
 	else
 		glColor3ub(30, 5, 34); // Dark color for black Pawn
 
-	// Calculate the actual position of the Pawn on the chessboard
+	// Calculate the actual position of the Pawn on the Chessboard
 	x = x * d + offset + d / 2;
 	y = y * d + offset + d / 2;
 
@@ -325,18 +326,18 @@ void display() {
     glFlush();
 }
 
-// Initialize the chessboard layout and chess engine
+// Initialize the Chessboard layout and chess engine
 void initboard() {
     d = h;
     if (w < d) d = w;
     d = d / 8;
     board_layout();
-    c1.setking(king);
-    c1.setqueen(queen);
-    c1.setbishop(bishop);
-    c1.setrook(rook);
-    c1.setknight(knight);
-    c1.setpawn(pawn);
+    c1.setKing(king);
+    c1.setQueen(queen);
+    c1.setBishop(bishop);
+    c1.setRook(rook);
+    c1.setKnight(knight);
+    c1.setPawn(pawn);
 }
 
 int m = 0;
@@ -356,7 +357,7 @@ void mouse(int b, int s, int x, int y) {
         return; // Only handle left mouse button press events
     }
     if (x > (8 * d + offset) || y > (8 * d + offset)) {
-        return; // Clicked outside the chessboard
+        return; // Clicked outside the Chessboard
     }
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
