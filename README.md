@@ -1,9 +1,16 @@
 # Chess-Game OpenGL
 
-Implementation of 2D chess using OpenGL library
+Implementation of 2D chess game using OpenGL library in C++.
 
-After Installation of OpenGL library:
+### Running the code
 
- 1) To compile the file: `g++ main.cpp -lglut -lGLU -lGL -o result` 
-      
- 2) To run the file: `./result`
+The `Makefile` contains the commands to compile and run the code.
+
+- Run the following command to compile the code
+```
+make compile
+```
+- To run the code, type in the following command
+```
+make run
+```
